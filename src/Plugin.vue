@@ -1,6 +1,6 @@
 <template>
   <div class="uk-form-row">
-    <select class="uk-width-1-1" v-model="model">
+    <select class="uk-width-1-1" v-model="model.value">
         <option></option>
         <option v-for="year in data.years" v-bind:value="year">{{ year }}</option>
       </select>
@@ -16,7 +16,9 @@
     },
     methods: {
       initWith: function () {
-        return ''
+        return {
+          value: ''
+        }
       }
     },
     events: {
@@ -26,8 +28,7 @@
           end: new Date().getFullYear()
         }
         if (!this.schema.options) {
-          console.log('years: Define the following options: 0 : start, 1 : end (default current Year)');
-
+          console.log('years: Define the following options: 0 : start, 1 : end (default current Year)')
         }
         for (option in this.schema.options) {
           if (options[option.name]) {

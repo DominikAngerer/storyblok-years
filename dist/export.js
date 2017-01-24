@@ -12,7 +12,9 @@ exports.default = {
   },
   methods: {
     initWith: function initWith() {
-      return '';
+      return {
+        value: ''
+      };
     }
   },
   events: {
@@ -47,7 +49,7 @@ exports.default = {
   }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "<div class=uk-form-row><select class=uk-width-1-1 v-model=model><option><option v-for=\"year in data.years\" v-bind:value=year>{{ year }}</select></div>"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "<div class=uk-form-row><select class=uk-width-1-1 v-model=model.value><option><option v-for=\"year in data.years\" v-bind:value=year>{{ year }}</select></div>"
 
 },{}],2:[function(require,module,exports){
 'use strict';
