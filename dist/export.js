@@ -22,7 +22,7 @@ exports.default = {
         end: new Date().getFullYear()
       };
       if (!this.schema.options) {
-        console.error('years: Define the following options: 0 : start, 1 : end (default current Year)');
+        console.log('years: Define the following options: 0 : start, 1 : end (default current Year)');
       }
       for (option in this.schema.options) {
         if (options[option.name]) {
